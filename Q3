@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "enter salary:"
+read n
+b=$n
+
+if [ $b -gt 2000 ]
+then
+      m=`expr $b \* 15`
+      s=`expr $m / 100`
+      r=`expr $n - $s`
+      echo " $r "
+elif [ $b -lt 2000 -a $b -gt 1000 ]
+then 
+      c=`expr $b \* 10`
+      p=`expr $c / 100`
+      r=`expr $n - $p`
+      echo " $r "
+else
+      echo "No tax" 
+fi
