@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "enter number:"
+read n
+b=$n
+temp=`expr $b % 2`
+if [ $b -eq 2 ]
+then 
+      echo " $b is a primer number  "
+elif [ $temp -eq 0 ]
+then
+
+      echo " $b is not a primer number  "
+
+else
+      echo " $b is  a primer number  "
+fi
