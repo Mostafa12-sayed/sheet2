@@ -1,0 +1,158 @@
+1-
+
+import random
+
+secret_number=random.choice(range(1,11))
+
+print(secret_number)
+
+count=0
+
+while count<10:
+
+    guess=int(input('guess a number between 1 and 10 :'))
+
+    dif=abs(secret_number-guess)
+
+    if dif >=5:
+
+        print('not even close')
+
+    elif dif <= 5 and dif >=3:
+
+        print('close')
+
+    elif dif<3 and dif > 0:
+
+        print('almost there')
+
+    else:
+
+        print('guessing is correct')
+
+        break
+
+    count=count+1
+-------------------------------------------------------------------------------------------------
+2-
+
+l1=[1,2,4]
+
+l2=[2,3]
+
+result=0
+
+for i in l1:
+
+    for j in l2:
+
+        result=result+(i*j)
+
+print(result)
+-------------------------------------------------------------------------------------------------
+3-
+
+
+list=['a','b','b','a','c','b','c','c']
+
+lis=[]
+
+i=0
+
+while i < 8:
+
+    
+
+    if list[i]==list[i+1]:
+
+        i=i+2
+
+    else:
+
+        lis.append(list[i])
+
+        i=i+1
+
+        
+
+print(lis)    
+---------------------------------------------------------------------------------------------------
+4-
+
+lis=['a','b','b','a','c','b','c','c']
+
+dict={}
+
+li=[]
+
+
+
+for let in lis:
+
+    if let in dict:
+
+        dict[let]+=1
+
+    else:
+
+        dict[let]=1
+
+for l in dict:
+
+    li.append(l)
+
+print(li)
+
+------------------------------------------------------------------------------------------------------
+5-
+
+fruitToColor = { 'banana' : 'yellow' ,'blueberry' : 'blue' ,'cherry' : 'red' ,'lemon ' : 'yellow' ,
+                ' kiwi' : 'green' ,'strawberry ' : 'red' ,'tomato' : 'red' }
+l=[]
+x=input()
+for m in fruitToColor:
+    if  fruitToColor[m] == x:
+        l.append(m)
+print(l)
+---------------------------------------------------------------------------------------------------------  
+6-
+
+x=int(input('enter the first number : '))
+y=int(input('enter the first number : '))
+count=1
+var=0
+if x > y:
+    while count < x:
+        if x%count==0:
+            if y%count==0:
+                var=count
+        count=count+1
+else:    
+    while count < y:
+        if x%count==0:
+            if y%count==0:
+                var=count
+        count=count+1
+print('gcd =',var) 
+--------------------------------------------------------------------------------------------------------
+7-
+
+def letter(var):
+    m=len(var)
+    print('total letters =',m)
+    v=1/m
+    dict = {}
+    for i in var:
+        if i in dict:
+            dict[i] += v
+        else:
+            dict[i] = v
+    
+    for k, v in dict.items():
+          print(k,'=', v)
+                            
+var=str(input('enter string')) 
+letter(var)
+
+
+
