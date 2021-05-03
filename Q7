@@ -1,0 +1,19 @@
+#!/bin/bash
+echo "Enter a number"
+read n
+d=0
+re=0
+sum=0
+num=0
+while [ $n -gt 0 ]
+do
+    d=$(( $n % 10 ))
+    re=$(( $re *\ 10 + $d ))
+    n=$(( $n / 10 ))
+    sum=$(($sum + $d))
+    num=$(($num + 1))
+done
+ave=$(( $sum / $num ))
+echo "Reverse number of entered digit is $re"
+echo "sum of the digits $sum"
+echo "average of the digits $ave"
