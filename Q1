@@ -1,0 +1,33 @@
+import random
+
+secret_number=random.choice(range(1,11))
+
+print(secret_number)
+
+count=0
+
+while count<10:
+
+    guess=int(input('guess a number between 1 and 10 :'))
+
+    dif=abs(secret_number-guess)
+
+    if dif >=5:
+
+        print('not even close')
+
+    elif dif <= 5 and dif >=3:
+
+        print('close')
+
+    elif dif<3 and dif > 0:
+
+        print('almost there')
+
+    else:
+
+        print('guessing is correct')
+
+        break
+
+    count=count+1
